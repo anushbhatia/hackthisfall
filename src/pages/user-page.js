@@ -52,7 +52,7 @@ const UserPage = props => {
 
   useEffect(() => {
     if (window.innerWidth < 800) {
-      toggleMenuIsOpen(!menuIsOpen);
+      toggleMenuIsOpen();
     }
   }, []);
 
@@ -81,7 +81,7 @@ const UserPage = props => {
     if (!useMockData) {
       getData();
     } else {
-      setIsError({ ...error, active: false });
+      setIsError({ active: false });
       togglePressed('User');
       setUserInfo(mockUser);
       setUserRepos(mockRepos);
